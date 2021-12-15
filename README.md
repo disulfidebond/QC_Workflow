@@ -230,15 +230,4 @@ print(output_verbose)
 print(output_verbose2)
 
 
-outerMerged = merge(x = dm_table, y = check_Q30bases, by="Sample", all=TRUE)
-outerMerged$LowMQS = is.na(outerMerged$Lane.y)
-dropCols <- outerMerged %>% select(ends_with('.y'))
-dropCols <- colnames(dropCols)
-outerMerged = outerMerged[, -which(names(outerMerged) %in% dropCols)]
-
-tmpColNames = colnames(outerMerged)
-mergedColNames = str_remove(tmpColNames, '.x')
-colnames(outerMerged) = mergedColNames
-
-
 ```
