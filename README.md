@@ -13,7 +13,8 @@ library(stringr)
 demul_QC_report = c('Churpek_Demultiplex_Stats.htm')
 multiQC_report = c('Churpek_multiqc_report.html')
 `%notin%` <- Negate(`%in%`)
-fqSizeList = c('fileSizes.1501_1215.csv')
+# See Second Step below for instructions for this
+fqSizeList = c('')
 
 
 
@@ -96,7 +97,7 @@ if (nrow(df_check) == 0) {
 
 # Second Step: Check Sizes of Fastq Files
 
-There are two ways to check the file sizes. The codeblock Step 2A below is the default, and allows you to import a CSV file with file sizes. This file must be contain two comma-separated columns, with the headers `Size_in_GB,FileName`.
+There are two ways to check the file sizes. The codeblock Step 2A below is the default, and allows you to import a CSV file with file sizes. This file must be contain two comma-separated columns, with the headers `Size_in_GB,FileName`. Alternatively, you can use the bash script `generateSizeFile.sh` to generate a CSV file size list, and enter this in the first block the `fqSizeList` variable. 
 
 ```{r}
 # Step 2A: import CSV file of file sizes
