@@ -14,6 +14,7 @@ library(stringr)
 demul_QC_report = c('Churpek_Demultiplex_Stats.htm')
 multiQC_report = c('Churpek_multiqc_report.html')
 `%notin%` <- Negate(`%in%`)
+# See Second Step below for instructions for this
 fqSizeList = c('')
 
 
